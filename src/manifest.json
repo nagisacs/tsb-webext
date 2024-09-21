@@ -1,0 +1,103 @@
+{
+  "name": "tsb-webext",
+  "version": "1.5.0",
+  "description": "Improve UI of TAO Web site.",
+  "manifest_version": 3,
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://taogames.net/*"
+      ],
+      "exclude_matches": [
+        "https://taogames.net/image/*",
+        "https://taogames.net/payment*"
+      ],
+      "js": [
+        "js/index.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://taogames.net/*"
+      ],
+      "css": [
+        "css/index.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://taogames.net/player/zukan/*"
+      ],
+      "js": [
+        "js/dex.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://taogames.net/player/shop"
+      ],
+      "js": [
+        "js/sortShop.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://taogames.net/player/shop"
+      ],
+      "js": [
+        "js/shop.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://taogames.net/player/myguild*"
+      ],
+      "js": [
+        "js/sortGuildShop.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://taogames.net/player/guild"
+      ],
+      "js": [
+        "js/guild.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://taogames.net/player/weapons?create_weapon=true"
+      ],
+      "js": [
+        "js/weapon.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://taogames.net/player/ranking*"
+      ],
+      "exclude_matches": [
+        "https://taogames.net/player/ranking?type=5*",
+        "https://taogames.net/player/ranking?type=7*",
+        "https://taogames.net/player/ranking?type=10*"
+      ],
+      "js": [
+        "js/rank.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://taogames.net/player/ranking?type=5*",
+        "https://taogames.net/player/ranking?type=7*"
+      ],
+      "js": [
+        "js/rankSpecial.js"
+      ]
+    }
+  ]
+}

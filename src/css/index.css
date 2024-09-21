@@ -1,0 +1,44 @@
+:root {
+    --lighten-4: #F8BBD0;
+    --darken-4: #880E4F;
+}
+
+/* お気に入り 星 */
+span.material-icons.change_to_empty_star {
+    color: yellow;
+}
+
+/* お気に入り エンチャント 文字 */
+div.weapon_skill_div > div.weapon_skill.lock > div {
+    color: yellow !important;
+}
+
+/* 左上 */
+.header-tao-icon {
+    margin-left: 2.5vw !important;
+}
+
+/* 右上 */
+#wrapper {
+    margin-right: 2.5vw !important;
+}
+
+/* Addボタン */
+button.insert-btn {
+    padding: 0.5vh 10vh;
+    margin: 0 15px 15px;
+    color: var(--darken-4);
+    background-color: var(--lighten-4);
+    border-radius: 10px;
+}
+
+.label-wrapper {
+    margin-top: 2vh;
+}
+
+.nocopy {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
